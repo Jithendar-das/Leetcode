@@ -1,15 +1,20 @@
+import java.util.Arrays;
 class Solution {
     public boolean containsDuplicate(int[] nums) {
 
-        HashSet<Integer> map = new HashSet<>();
+        Arrays.sort(nums);
+        int i=0;
+        int j=nums.length-1;
 
-        for(int i=0;i<nums.length;i++)
+
+        while(i<j)
         {
-            if(map.contains(nums[i]))
+            if(nums[i] == nums[i+1] || nums[j] == nums[j-1])
             {
                 return true;
             }
-            map.add(nums[i]);
+            i++;
+            j--;
         }
 
         return false;
