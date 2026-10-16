@@ -7,18 +7,17 @@ class Solution {
         {
             freq1[s.charAt(i) - 'a']++;
         }
+
         int[] freq2 = new int[26];
         for(int i=0;i<t.length();i++)
         {
             freq2[t.charAt(i) - 'a']++;
         }
 
-        if(Arrays.equals(freq1, freq2))
+        if(Arrays.equals(freq1,freq2))
         {
             return true;
         }
-
         return false;
-        
     }
 }
