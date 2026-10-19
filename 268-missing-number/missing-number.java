@@ -3,22 +3,16 @@ class Solution {
 
         int n = nums.length;
 
-        Arrays.sort(nums);
+        int expectedsum = n*(n+1)/2;
 
-        if(nums[0] !=0)
+        int actualsum = 0;
+
+        for(int i=0;i<n;i++)
         {
-            return 0;
+            actualsum+=nums[i];
         }
 
-        for(int i=0;i<n-1;i++)
-        {
-            if(nums[i]+1 != nums[i+1])
-            {
-                return nums[i]+1;
-            }
-        }
-
-        return n;
+        return expectedsum - actualsum;
         
     }
 }
