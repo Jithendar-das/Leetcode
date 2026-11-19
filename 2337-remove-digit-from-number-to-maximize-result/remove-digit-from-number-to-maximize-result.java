@@ -3,7 +3,7 @@ class Solution {
 
         int n = number.length();
 
-        String result = "";
+        // String result = "";
 
         for(int i=1;i<n;i++)
         {
